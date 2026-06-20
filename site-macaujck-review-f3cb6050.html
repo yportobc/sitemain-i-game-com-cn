@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳门六合彩 · 简明使用指南</title>
+  <style>
+    /* 极简留白 · 窄正文 · 清晰标题层级 · 差异化版式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1c1a;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      padding: 2.5rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* Hero 区域 – 保留通透留白 */
+    .hero {
+      margin-bottom: 2.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 350;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #2b2b27;
+      border-bottom: 1px solid #dad8d4;
+      padding-bottom: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero .subhead {
+      font-size: 1rem;
+      color: #6a685e;
+      border-left: 3px solid #bbb3a8;
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    /* 卡片模块 – 轻盈无边框微阴影 */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 380;
+      color: #2d2c28;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      margin-bottom: 1.2rem;
+      color: #3d3b36;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特色列表 – 虚线前缀，克制 */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 0.2rem;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.7rem;
+      color: #3d3b36;
+    }
+
+    .feature-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b0a89c;
+      font-weight: 300;
+    }
+
+    /* 使用场景 – 简洁卡片式内嵌 */
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin: 1.2rem 0 0.3rem;
+    }
+
+    .scene-item {
+      background: #f4f2ef;
+      padding: 1rem 1.4rem;
+      border-radius: 40px 12px 12px 40px;
+      font-size: 0.95rem;
+      color: #2c2b26;
+    }
+
+    .scene-item strong {
+      font-weight: 500;
+      color: #1f1e1a;
+    }
+
+    /* 提示区块 */
+    .tip-box {
+      background: #f7f5f1;
+      border-left: 4px solid #b9af9f;
+      padding: 1.4rem 1.8rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .tip-box p {
+      margin-bottom: 0.4rem;
+    }
+
+    .tip-box p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .faq-summary {
+      margin-top: 1rem;
+    }
+
+    .faq-summary dt {
+      font-weight: 500;
+      margin: 0.8rem 0 0.2rem;
+      color: #2b2a25;
+      font-size: 1rem;
+    }
+
+    .faq-summary dd {
+      margin-left: 0.2rem;
+      color: #5b584f;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px dashed #ddd9d2;
+    }
+
+    .faq-summary dd:last-of-type {
+      border-bottom: none;
+    }
+
+    /* 链接样式 – 低调自然 */
+    a {
+      color: #3d5c4c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: #1f392b;
+      text-decoration-thickness: 2px;
+    }
+
+    /* 小字号与分隔 */
+    .footnote {
+      font-size: 0.85rem;
+      color: #8f8a7f;
+      margin-top: 2.5rem;
+      border-top: 1px solid #e6e2db;
+      padding-top: 1.5rem;
+      text-align: left;
+    }
+
+    .footnote a {
+      color: #6c786a;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.8rem 0.9rem;
+      }
+      .card {
+        padding: 1.3rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .scene-item {
+        border-radius: 20px 12px 12px 20px;
+        padding: 0.8rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Hero -->
+    <div class="hero">
+      <h1>澳门六合彩<br>简明使用指南</h1>
+      <div class="subhead">从信息认知到理性参与 · 知识型参考</div>
+    </div>
+
+    <!-- 摘要介绍 -->
+    <div class="card">
+      <h2>关于本指南</h2>
+      <p>许多人在初次面对「澳门六合彩」时，往往只看到结果而忽略规则与背景。本文以产品说明式的思路，梳理核心机制、适用场景及访问前需要留意的事项。所有内容均基于公开信息与常识整理，不构成任何操作建议或诱导。</p>
+      <p>若希望自行了解官方动态与完整规则，可参考 <a href="https://site-macaujck.com">澳门六合彩</a> 页面。该页面聚合了基础介绍与更新说明，适合作为信息起点。</p>
+    </div>
+
+    <!-- 核心亮点 -->
+    <div class="card">
+      <h2>功能特点</h2>
+      <ul class="feature-list">
+        <li>明确的开奖周期与规则说明，降低信息不对称</li>
+        <li>提供历史数据参考与趋势记录（非预测），辅助了解频率分布</li>
+        <li>界面以信息呈现为主，减少非必要干扰</li>
+        <li>持续更新相关说明与调整通知，保持内容时效</li>
+      </ul>
+    </div>
+
+    <!-- 使用建议 + 场景 -->
+    <div class="card">
+      <h2>适用场景与建议</h2>
+      <p>不同使用者对「澳门六合彩」的关注点差异较大，下面列出几种常见用途与对应的使用建议：</p>
+      <div class="scene-grid">
+        <div class="scene-item"><strong>信息了解</strong> — 阅读规则、概率与历史公告，建议先通读一次完整说明，再浏览具体数据。</div>
+        <div class="scene-item"><strong>数据分析</strong> — 若关注走势或频率，请合理设定观察区间，避免过度解读短期波动。</div>
+        <div class="scene-item"><strong>规则对比</strong> — 将不同期次说明并列对比，注意版本更新的生效时间。</div>
+        <div class="scene-item"><strong>理性参考</strong> — 无论出于何种目的，始终保持对随机性的基本认识，不依赖单一信息来源。</div>
+      </div>
+    </div>
+
+    <!-- 访问提示 + FAQ 摘要 -->
+    <div class="card">
+      <h2>访问提醒 · 常见疑问</h2>
+      <div class="tip-box">
+        <p><strong>访问前须知</strong></p>
+        <p>• 请确认您所在地区的法律允许访问此类信息内容。部分区域可能存在访问限制或特殊规定。</p>
+        <p>• 不要将任何页面内容解读为收益承诺或未来保证。所有历史数据仅供回顾，不预示后续结果。</p>
+        <p>• 注意保护个人隐私与设备安全，避免在不可信的环境下输入敏感信息。</p>
+      </div>
+
+      <dl class="faq-summary">
+        <dt>Q: 澳门六合彩是否有官方唯一网站？</dt>
+        <dd>A: 相关信息通常通过多个授权渠道发布。建议以权威公告为准，并留意域名与证书信息。有兴趣可对比 <a href="https://site-macaujck.com">澳门六合彩</a> 的内容与其他来源的异同。</dd>
+
+        <dt>Q: 页面上的历史数据能否用于策略制定？</dt>
+        <dd>A: 历史频率仅反映已发生的情况，不具备预测功能。任何基于有限样本的归纳都存在偏差，请谨慎参考。</dd>
+
+        <dt>Q: 遇到页面无法打开应当如何处理？</dt>
+        <dd>A: 先检查网络连接与浏览器设置，其次确认是否被本地防火墙或 DNS 干扰。必要时可更换访问环境或延迟重试。</dd>
+      </dl>
+    </div>
+
+    <!-- 结尾 + 补充指引 -->
+    <div class="footnote">
+      <p>本文内容仅作为知识型介绍，不鼓励任何非理性行为。如需深入了解，请直接浏览 <a href="https://site-macaujck.com">澳门六合彩</a> 的公开信息页面。请根据自身判断做出合适决定。</p>
+      <p style="margin-top: 1rem;">— 简明指南 · v1.2 · 保持克制与开放 —</p>
+    </div>
+  </div>
+</body>
+</html>
