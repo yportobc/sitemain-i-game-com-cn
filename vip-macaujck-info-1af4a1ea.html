@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料整理 · 澳门六合彩信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f6;
+            font-family: "Noto Sans SC", "PingFang SC", system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* hero 开场短句 */
+        .hero {
+            text-align: center;
+            padding: 3rem 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero .short-sentence {
+            font-size: 1.5rem;
+            font-weight: 350;
+            letter-spacing: 2px;
+            color: #34495e;
+            border-bottom: 2px solid #d5dbe0;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .hero .short-sentence span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #7f8c8d;
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+
+        /* 卡片分区 — 柔和阴影 + 细边框 */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(200, 208, 216, 0.5);
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1e2a38;
+            margin-bottom: 1.2rem;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8ecf0;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            color: #3b4a5a;
+            font-weight: 350;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 — 温和的圆角标签 */
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 16px;
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        .feature-item {
+            background: #f6f8fa;
+            border-radius: 40px;
+            padding: 8px 20px;
+            border: 1px solid #dfe4e9;
+            font-size: 0.95rem;
+            color: #2c3e50;
+            letter-spacing: 0.3px;
+            transition: background 0.15s;
+        }
+
+        .feature-item:hover {
+            background: #eef1f5;
+        }
+
+        .feature-item::before {
+            content: "·";
+            margin-right: 6px;
+            color: #8899aa;
+            font-weight: 700;
+        }
+
+        /* 温和提示 / 引用块 */
+        .gentle-note {
+            background: #edf2f7;
+            border-radius: 16px;
+            padding: 1.3rem 1.6rem;
+            margin: 1.6rem 0 0.6rem;
+            border-left: 4px solid #b0c4d8;
+            font-style: normal;
+            font-size: 0.95rem;
+            color: #2c3e50;
+        }
+
+        .gentle-note strong {
+            font-weight: 500;
+            color: #1a2633;
+        }
+
+        /* 内嵌链接 */
+        a {
+            color: #3c6b9c;
+            text-decoration: none;
+            border-bottom: 1px dotted #b6c9dd;
+            transition: border 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #1e4c7a;
+            border-bottom: 1px solid #1e4c7a;
+        }
+
+        /* FAQ 摘要格式 */
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #1e2a38;
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+
+        .faq-item .a {
+            color: #4a5b6b;
+            padding-left: 0.8rem;
+            border-left: 2px solid #d8dee5;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d0d8e0, transparent);
+            margin: 1.8rem 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8f9ea9;
+            padding: 2rem 0 0.6rem;
+            border-top: 1px solid #e2e7ec;
+            margin-top: 1rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .hero .short-sentence {
+                font-size: 1.25rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            .feature-list {
+                gap: 8px 10px;
+            }
+            .feature-item {
+                font-size: 0.9rem;
+                padding: 5px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 开场短句 -->
+    <div class="hero">
+        <div class="short-sentence">
+            一份安静的目录
+            <span>关于澳门六合彩的信息整理与资料索引</span>
+        </div>
+    </div>
+
+    <!-- 承接段落 · 从资料整理角度引入 -->
+    <div class="card">
+        <h2>浏览之前 · 一点说明</h2>
+        <p>
+            很多朋友在接触与六合彩相关的信息时，常常面对零散、重复的资讯而感到困惑。这个页面试着扮演一个安静的整理者：不渲染热度，不制造焦虑，只把一些有参考意义的资料线索按逻辑摆放。
+        </p>
+        <p>
+            我们一直相信，清晰的信息结构本身就能带来判断力。因此下面列举的内容大多来自公开资料与长期观察，力求克制、平实。如果你正在寻找更系统的参考，可以看看这里整理的<a href="https://vip-macaujck.com">澳门六合彩</a>相关索引——它不算什么捷径，但也许能让查找过程稍微顺心一些。
+        </p>
+    </div>
+
+    <!-- 特点列表 · 卡片形式展现信息特征 -->
+    <div class="card">
+        <h2>整理时关注的特质</h2>
+        <div class="feature-list">
+            <span class="feature-item">条目优先核实来源</span>
+            <span class="feature-item">避免主观解读</span>
+            <span class="feature-item">保持版本更新日期</span>
+            <span class="feature-item">区分规则与传闻</span>
+            <span class="feature-item">标注术语释义</span>
+            <span class="feature-item">提供对比参考</span>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.95rem;">
+            这些特质听起来或许有些基础，但正因如此，它们在信息过载的环境里显得尤为珍贵。每一条背后都对应着实际查阅时的常见痛点，我们希望用细节来回应细节。
+        </p>
+    </div>
+
+    <!-- 场景 + 提示 · 温和的卡片 -->
+    <div class="card">
+        <h2>什么情况下会用到这些内容</h2>
+        <p>
+            可能是刚开始接触，想先了解基本的玩法结构与历史沿革；也可能是想核对某些说法是否准确，或查找不同时期的数据变化。又或者只是偶然看到某个术语，需要一个不带倾向的解释。
+        </p>
+        <div class="gentle-note">
+            <strong>一点提示：</strong> 网络上关于六合彩的信息鱼龙混杂，有时连基本日期都互相矛盾。建议大家以官方或长期稳定更新的来源为主要参照，比如我们持续维护的<a href="https://vip-macaujck.com">澳门六合彩</a>资料页面，至少能做到每次修改都留下记录。
+        </div>
+        <p style="margin-top: 0.8rem;">
+            另外，如果你发现某条信息已经过时，或者有更好的公开资料愿意分享，随时可以提出——整理工作本来就是大家一起慢慢完善的。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要 · 展示两三个典型问题 -->
+    <div class="card">
+        <h2>几个常被问到的点</h2>
+        <div class="faq-item">
+            <div class="q">「特码」和「正码」到底怎么区分？</div>
+            <div class="a">简单说，特码是单独摇出的一个特别号码，正码则是其余六个普通号码。不同玩法对应不同的组合方式，具体可以翻阅相应规则说明。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">历史开奖数据在哪里比较可靠？</div>
+            <div class="a">多数综合信息站都会整理历期结果，但建议筛选那些明确标注数据来源、并且保持定期更新的站点。比如<a href="https://vip-macaujck.com">澳门六合彩</a>资料库就按年份归档，同时附注了每批数据的核查状态。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">术语「二全中」「三全中」是什么意思？</div>
+            <div class="a">属于连码玩法中的叫法，指的是所选号码与开奖号码（包含特码）重合的数量达到指定要求。不同地区或平台的表述可能略有出入，以规则原文为准。</div>
+        </div>
+        <hr>
+        <p style="font-size: 0.9rem; color: #5f7385;">
+            FAQ 的内容会根据收到的提问不定期补充，如果你有其他疑问，也欢迎通过站内反馈渠道提出。
+        </p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div style="text-align: center; padding: 1.2rem 0 0.8rem;">
+        <p style="font-size: 1rem; color: #3e5366; max-width: 560px; margin: 0 auto;">
+            信息整理是一份细活，不求热闹，但求准确。希望这里的索引能在你需要时提供一点帮助。
+        </p>
+        <p style="font-size: 0.9rem; color: #8a9aa8; margin-top: 10px;">
+            —— 仅此而已，已经足够。
+        </p>
+    </div>
+
+    <div class="footer-note">
+        内容索引 · 持续修订中 &nbsp;|&nbsp; 保持克制与真实
+    </div>
+
+</div>
+</body>
+</html>
